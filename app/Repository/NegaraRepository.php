@@ -21,6 +21,22 @@ class NegaraRepository implements NegaraRepositoryInterface {
         }
     }
 
+    public function getDirektoratById($id) {
+        try {
+            return Direktorat::findOrFail($id);
+        } catch (ModelNotFoundException $e) {
+            return null;
+        }
+    }
+
+    public function getKawasanById($id) {
+        try {
+            return Kawasan::findOrFail($id);
+        } catch (ModelNotFoundException $e) {
+            return null;
+        }
+    }
+
     public function getOrCreateDirektorat($direktoratData) {
         return Direktorat::firstOrCreate(
             ['nama_direktorat' => $direktoratData['nama_direktorat']]

@@ -7,3 +7,5 @@ Route::get('/negara/{id}', [NegaraController::class, 'show']);
 Route::post('negara', [NegaraController::class, 'store']);
 Route::put('negara/{id}', [NegaraController::class, 'update']);
 Route::delete('negara/{id}', [NegaraController::class, 'destroy']);
+Route::get('/kawasan/{id}', [NegaraController::class, 'showKawasan']);
+Route::get('/direktorat/{id}', [NegaraController::class, 'showDirektorat']);

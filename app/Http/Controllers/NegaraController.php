@@ -34,4 +34,12 @@ class NegaraController extends Controller {
         $this->negaraRepository->deleteNegara($id);
         return response()->json(null, 204);
     }
+
+    public function showDirektorat($id) {
+        return response()->json($this->negaraRepository->getDirektoratById($id));
+    }
+
+    public function showKawasan($id) {
+        return response()->json($this->negaraRepository->getKawasanById($id));
+    }
 }
