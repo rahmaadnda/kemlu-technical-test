@@ -13,6 +13,7 @@
         "APP_KEY":"base64:w9pN9tvamv2Td5n6DxqRPnNfQIH9TV7vQ9SbUh6/plk=",
         "APP_DEBUG": "true",
         "APP_URL": "https://kemlu-technical-test.vercel.app",
+        "ASSET_URL": "https://kemlu-technical-test.vercel.app/public/",
 
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
