@@ -46,15 +46,15 @@
                 return colorScale(d) || '#ffffff';
             }
 
-            $.getJSON('/api/negara', function (negaraData) {
+            $.getJSON('/api/api/negara', function (negaraData) {
                 var directorateIds = [...new Set(negaraData.map(d => d.id_direktorat))];
 
                 colorScale = d3.scaleOrdinal(d3.schemeCategory10).domain(directorateIds);
 
                 negaraData.forEach(function (d) {
                     $.when(
-                        $.getJSON(`/api/kawasan/${d.id_kawasan}`),
-                        $.getJSON(`/api/direktorat/${d.id_direktorat}`)
+                        $.getJSON(`/api/api/kawasan/${d.id_kawasan}`),
+                        $.getJSON(`/api/api/direktorat/${d.id_direktorat}`)
                     ).then(function (kawasanData, direktoratData) {
                         d.nama_kawasan = kawasanData[0].nama_kawasan;
                         d.nama_direktorat = direktoratData[0].nama_direktorat;

@@ -37,20 +37,20 @@
         $('#negara-table').bootstrapTable('destroy');
         $('#loading').show(); 
 
-        $.getJSON('/api/negara', function (negaraData) {
+        $.getJSON('/api/api/negara', function (negaraData) {
           const kawasanPromises = [];
           const direktoratPromises = [];
 
           negaraData.forEach(function (negara) {
             negara.created_at = formatLocalTime(negara.created_at);
             kawasanPromises.push(
-              $.getJSON(`/api/kawasan/${negara.id_kawasan}`).then(function (kawasanData) {
+              $.getJSON(`/api/api/kawasan/${negara.id_kawasan}`).then(function (kawasanData) {
                 negara.nama_kawasan = kawasanData.nama_kawasan;
               })
             );
 
             direktoratPromises.push(
-              $.getJSON(`/api/direktorat/${negara.id_direktorat}`).then(function (direktoratData) {
+              $.getJSON(`/api/api/direktorat/${negara.id_direktorat}`).then(function (direktoratData) {
                 negara.nama_direktorat = direktoratData.nama_direktorat;
               })
             );
@@ -106,7 +106,7 @@
           const negaraId = row.id_negara;
 
           $.ajax({
-            url: `/api/negara/${negaraId}`,
+            url: `/api/api/negara/${negaraId}`,
             type: 'DELETE',
             success: function (result) {
               alert('Negara berhasil dihapus!');
