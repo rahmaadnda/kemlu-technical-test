@@ -6,7 +6,7 @@
     <title>Visualisi Geomap</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
-    <link rel="stylesheet" href="{{ asset('css/geomap.css') }}">
+    <link rel="stylesheet" href="{{ url('css/geomap.css') }}">
 </head>
 <body>
     <div id="map"></div>
@@ -14,7 +14,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script> 
 
-    <script src="{{ asset('js/geomap.js') }}"></script>
+    <script src="{{ url('js/geomap.js') }}"></script>
 
 </body>
 </html>
