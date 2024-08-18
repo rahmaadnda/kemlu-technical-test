@@ -10,6 +10,7 @@
     }],
     "env": {
         "APP_ENV": "production",
+        "APP_KEY":"base64:w9pN9tvamv2Td5n6DxqRPnNfQIH9TV7vQ9SbUh6/plk=",
         "APP_DEBUG": "true",
         "APP_URL": "https://kemlu-technical-test.vercel.app",
 
