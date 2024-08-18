@@ -6,7 +6,7 @@
     <title>Technical Test</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   
-    <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url('/css/styles.css') }}">
 
 </head>
 <body class="bg-light d-flex align-items-center justify-content-center vh-100">
