@@ -1,4 +1,3 @@
-// public/js/scripts.js
 $(document).ready(function () {
   loadNegaraData(); 
   
